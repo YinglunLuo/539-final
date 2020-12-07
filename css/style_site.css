@@ -1,0 +1,256 @@
+header{
+  background-image: url('../image/Sites/header.jpg');
+  background-size: cover;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-attachment: scroll;
+  font-size: 6vw;
+  padding: 50px;
+  color: white;
+  height: 15vh;
+}
+:focus{
+  border: solid azure 2px;
+}
+header h1{
+  -webkit-animation: puff-in-center 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+  animation: puff-in-center 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+}
+header .skip a{
+  background: #333;
+  left: 0;
+  padding: 14px;
+  top: -80px;
+  font-size: 2.5vw;
+  position: absolute;
+}
+header .skip a:focus{
+  top:0;
+  -webkit-animation: puff-in-center 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+  animation: puff-in-center 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+}
+
+@-webkit-keyframes puff-in-center {
+  0% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes puff-in-center {
+  0% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+nav {
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  top: 0;
+}
+nav a {
+  float: right;
+  display: block;
+  text-align: center;
+  padding: 2.25%;
+  text-decoration: none;
+}
+nav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+nav .now{
+  background-color: #505e88;
+  color: white;
+}
+
+a:link{
+  color: white;
+  font-weight: bold;
+}
+
+a:visited{
+  color: white;
+  font-weight: bold;
+}
+img{
+  object-fit: cover;
+  height:250px;
+  width: 100%;
+}
+
+main{
+  padding: 5vw;
+  background-color: #505e88;
+  color: white;
+}
+
+.container{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2vw;
+}
+
+h2{
+  font-weight: bold;
+  font-size: 5vw;
+}
+
+footer{
+  background-color: #333;
+}
+fieldset {
+  color: white;
+  padding: .35em .625em .75em;
+  margin: 0 2px;
+  border: 1px solid silver;
+}
+legend {
+  padding: .5em;
+  border: 0;
+  width: auto;
+  font-size: 1.5em;
+}
+form p{
+  font-size: 1.25em;
+}
+form label{
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+}
+form input{
+  width: 90%;
+  padding: 1em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: lightgrey;
+}
+form input:focus{
+  background-color: white;
+}
+form input[type=submit]{
+  background-color: #8f2d2d;
+}
+form input[type=submit]:active{
+  background-color: #6e1313;
+}
+
+@media screen and (min-width: 600px){
+  header{
+    height: 30vh;
+    padding-top: 100px;
+  }
+  .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: azure 3px solid;
+    justify-content: center;
+    grid-gap: 10px;
+    padding: 10px;
+  }
+  .image{
+    display:block;
+    margin:auto;
+  }
+  .flip-card{
+    border: azure 3px solid;
+  }
+}
+@media screen and (min-width: 1280px){
+  header{
+    height: 35vh;
+    padding-top: 100px;
+  }
+  .container h2{
+    font-size: 2em;
+  }
+  .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border: azure 3px solid;
+    justify-content: center;
+    grid-gap: 10px;
+    padding: 10px;
+  }
+  .image{
+    display:block;
+
+  }
+  .flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px; 
+    width: 100%;
+    height: 250px;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .image, .paragraph_box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
+  }
+
+  .image {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  .paragraph_box {
+    background-color: #524e2e;
+    color: white;
+    transform: rotateY(180deg);
+    font-size: 0.5em;
+  }
+  form input{
+    width: 40%;
+    display: inline;
+  }
+  form input[type=submit]{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  form label{
+    display: inline;
+  }
+}
