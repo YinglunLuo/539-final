@@ -209,7 +209,7 @@ footer{
     background-color: #524e2e;
     color: white;
     transform: rotateY(180deg);
-    font-size: 0.55em;
+    font-size: 0.5em;
   }
 }
 @media screen and (prefers-reduced-motion: reduce){
