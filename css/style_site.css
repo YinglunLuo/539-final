@@ -118,43 +118,7 @@ h2{
 
 footer{
   background-color: #333;
-}
-fieldset {
   color: white;
-  padding: .35em .625em .75em;
-  margin: 0 2px;
-  border: 1px solid silver;
-}
-legend {
-  padding: .5em;
-  border: 0;
-  width: auto;
-  font-size: 1.5em;
-}
-form p{
-  font-size: 1.25em;
-}
-form label{
-  display: block;
-  margin-top: 0.5em;
-  margin-bottom: 1em;
-}
-form input{
-  width: 90%;
-  padding: 1em;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: lightgrey;
-}
-form input:focus{
-  background-color: white;
-}
-form input[type=submit]{
-  background-color: #8f2d2d;
-}
-form input[type=submit]:active{
-  background-color: #6e1313;
 }
 
 @media screen and (min-width: 600px){
@@ -182,6 +146,10 @@ form input[type=submit]:active{
   header{
     height: 35vh;
     padding-top: 100px;
+  }
+  main{
+    padding-left: 10vw;
+    padding-right: 10vw ;
   }
   .container h2{
     font-size: 2em;
@@ -217,8 +185,8 @@ form input[type=submit]:active{
     transform-style: preserve-3d;
   }
   
-  
-  .flip-card:hover .flip-card-inner {
+  .flip-card:hover .flip-card-inner,
+  .flip-card:focus-within .flip-card-inner {
     transform: rotateY(180deg);
   }
   
@@ -229,7 +197,7 @@ form input[type=submit]:active{
     -webkit-backface-visibility: hidden; 
     backface-visibility: hidden;
   }
-
+  
   .image {
     background-color: #bbb;
     color: black;
@@ -239,18 +207,14 @@ form input[type=submit]:active{
     background-color: #524e2e;
     color: white;
     transform: rotateY(180deg);
-    font-size: 0.5em;
+    font-size: 0.8em;
   }
-  form input{
-    width: 40%;
-    display: inline;
+}
+@media screen and (prefers-reduced-motion: reduce){
+  header h1{
+    animation: none;
   }
-  form input[type=submit]{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  form label{
-    display: inline;
+  header .skip a:focus{
+    animation: none;
   }
 }
